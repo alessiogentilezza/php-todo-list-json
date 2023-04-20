@@ -22,9 +22,12 @@ createApp({
         },
 
         addTodo() {
+            if (this.item.text.length > 0) {
+                this.todoList.push({ ...this.item });
+                this.item.text = "";  //this.text = "";
 
-            this.todoList.push({ ...this.item });
-            this.item.text = "";  //this.text = "";
+            }
+
 
             axios.post('server.php', data,
                 {

@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, sans-serif;
+    background-color: rgba(231, 219, 219, 0.918);
+    padding-top: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(68, 221, 170, 0.514);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px #333333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+.todo-list {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.todo-list li {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+
+}
+
+.todo-text {
+    flex-grow: 1;
+}
+
+.text-decoration {
+    text-decoration-line: line-through;
+}
+
+.red{
+    color: red;
+}
+ img {
+    padding: 10px 0;
+	height: 250px;
+	border-radius: 50px;
+} 
+.fine{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h4{
+    padding: 10px 0;
+}
