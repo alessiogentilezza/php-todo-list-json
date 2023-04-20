@@ -10,11 +10,12 @@ createApp({
     methods: {
         readList() {
             axios.get('server.php')
-            .then(response => {
-                this.todoList = response.data;
-            })
+                .then(response => {
+                    this.todoList = response.data;
+                })
         },
-         addTodo() {
+
+        addTodo() {
 
             const data = {
                 newItem: this.newItem
@@ -26,12 +27,10 @@ createApp({
                 }
             ).then(response => {
                 this.todoList = response.data;
-                this.newItem ='';
+                this.newItem = '';
             });
         }
 
-
- 
     },
     mounted() {
         this.readList();

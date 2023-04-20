@@ -14,7 +14,7 @@
 
 <body>
 
-    <div id="app" >
+    <div id="app">
         <div class="container">
             <h1 class="text-center">Lista della spesa</h1>
             <ul class="list-group my-3">
@@ -23,7 +23,7 @@
                     <span v-else>{{todo.text}}</span>
                 </li>
             </ul>
-            <input type="text" placeholder="cosa devo comprare" v-model="item.text" @keyup.enter="addTodo" class="me-3" >
+            <input type="text" placeholder="cosa devo comprare" v-model="newItem" @keyup.enter="addTodo" class="me-3">
             <button @click="addTodo">Aggiungi</button>
         </div>
     </div>
