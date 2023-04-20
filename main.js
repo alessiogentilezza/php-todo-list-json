@@ -35,7 +35,6 @@ createApp({
             });
         }
 
-
     },
     mounted() {
         this.readList();
