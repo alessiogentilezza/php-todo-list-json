@@ -19,7 +19,7 @@
             <h1 class="text-center">Lista della spesa</h1>
             <ul class="list-group my-3">
                 <li v-for="todo in todoList" class="list-group-item">
-                    <del v-if="todo.done==true">{{todo.text}}</del>
+                    <del v-if="todo.done==true" class="text-danger">{{todo.text}}</del>
                     <span v-else>{{todo.text}}</span>
                 </li>
             </ul>

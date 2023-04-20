@@ -19,7 +19,7 @@ $todoList = [
     ]
 ];
 
-if (isset($_POST["newItem"])) {
+if (isset($_POST["newItem"]) && ($_POST["newItem"]) >0) {
     $new_Item = ["text" => $_POST["newItem"]];
     $todoList[] = $new_Item;
 }
