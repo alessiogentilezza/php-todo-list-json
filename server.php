@@ -14,9 +14,9 @@ $todoList = [
         "done" => true,
     ],
     [
-        "item" => "lievito",
+        "text" => "lievito",
         "done" => false,
-    ],
+    ]
 ];
 
 header('Content-Type: application/json');
