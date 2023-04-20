@@ -11,8 +11,6 @@ body {
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 10px;
     background-color: rgba(68, 221, 170, 0.514);
     border-radius: 10px;
