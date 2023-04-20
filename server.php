@@ -19,7 +19,11 @@ $todoList = [
     ]
 ];
 
+if (isset($_POST['newItem'])) {
+    $new_Item = ['text' => $_POST['newItem']];
+    $todoList[] = $new_Item;
+}
+
+
 header('Content-Type: application/json');
 echo json_encode($todoList);
-
-
