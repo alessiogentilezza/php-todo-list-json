@@ -1,7 +1,6 @@
 <?php
 
 if (file_exists('database.json')) {
-
     //leggo il file json come stringa
     $string = file_get_contents('database.json');
     //decodifica i dati come come una variabile php
@@ -24,6 +23,15 @@ if (isset($_POST["newItem"]) && ($_POST["newItem"]) > 0) {
 if (isset($_POST["toggle"])) {
     $todo_index = $_POST["toggle"];
     $todoList[$todo_index]['done'] = !$todoList[$todo_index]['done'];
+    //codifico l'array in un formato json
+    $new_String = json_encode($todoList);
+    //scrivo i dati nel file .json
+    file_put_contents('database.json', $new_String);
+}
+
+if (isset($_POST["delete"])) {
+    $todo_index = $_POST["delete"];
+    array_splice($todoList, $todo_index, 1);
     //codifico l'array in un formato json
     $new_String = json_encode($todoList);
     //scrivo i dati nel file .json

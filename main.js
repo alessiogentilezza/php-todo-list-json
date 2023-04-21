@@ -42,7 +42,20 @@ createApp({
             ).then(response => {
                 this.todoList = response.data;
             });
-        }
+        },
+
+        itemDelete(index) {
+            const data = {
+                delete: index,
+            };
+            axios.post('server.php', data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }
+            ).then(response => {
+                this.todoList = response.data;
+            });
+        },
 
     },
     mounted() {
