@@ -21,8 +21,11 @@
         <div class="container w-50">
             <h2 class="text-center">Lista della spesa...</h2>
             <ul class="list-group my-3">
-                <li v-for="todo in todoList" class="list-group-item d-flex justify-content-between"
-                    :class="{'text-decoration-line-through' : todo.done}">{{todo.text}}
+                <li v-for="(todo, index) in todoList" class="list-group-item d-flex justify-content-between"
+                    :class="{'text-decoration-line-through' : todo.done}">
+                    <span @click="itemDone(index)">
+                        {{todo.text}}
+                    </span>
                     <span><i class="fa-solid fa-trash-can text-danger"></i></span>
                 </li>
             </ul>
@@ -39,6 +42,8 @@
         integrity="sha512-06NZg89vaTNvnFgFTqi/dJKFadQ6FIglD6Yg1HHWAUtVFFoXli9BZL4q4EO1UTKpOfCfW5ws2Z6gw49Swsilsg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='main.js'></script>
+
+    <div v-for=""></div>
 </body>
 
 </html>

@@ -29,6 +29,19 @@ createApp({
                 this.newItem = '';
                 console.log(this.todoList)
             });
+        },
+
+        itemDone(index) {
+            const data = {
+                toggle: index,
+            };
+            axios.post('server.php', data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }
+            ).then(response => {
+                this.todoList = response.data;
+            });
         }
 
     },
