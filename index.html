@@ -18,17 +18,19 @@
 <body>
 
     <div id="app">
-        <div class="container">
-            <h1 class="text-center">Lista della spesa</h1>
+        <div class="container w-50">
+            <h2 class="text-center">Lista della spesa...</h2>
             <ul class="list-group my-3">
-                <li v-for="todo in todoList" class="list-group-item d-flex justify-content-between">
-                    <del v-if="todo.done==true" class="text-danger">{{todo.text}}</del>
-                    <span v-else>{{todo.text}}</span>
-                    <i class="fa-solid fa-trash-can"></i>
+                <li v-for="todo in todoList" class="list-group-item d-flex justify-content-between"
+                    :class="{'text-decoration-line-through' : todo.done}">{{todo.text}}
+                    <span><i class="fa-solid fa-trash-can text-danger"></i></span>
                 </li>
             </ul>
-            <input type="text" placeholder="cosa devo comprare" v-model="newItem" @keyup.enter="addTodo" class="me-3">
-            <button @click="addTodo">Aggiungi</button>  
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="cose da comprare" v-model="newItem"
+                    @keyup.enter="addTodo">
+                <button @click="addTodo" class="btn btn-info">Aggiungi</button>
+            </div>
         </div>
     </div>
 

@@ -5,8 +5,7 @@
 }
 
 body {
-    font-family: Georgia, sans-serif;
-    background-color: rgba(231, 219, 219, 0.918);
+    background-color: rgba(231, 219, 219, 0.918)!important;
     padding-top: 30px;
 }
 

@@ -12,15 +12,14 @@ createApp({
             axios.get('server.php')
                 .then(response => {
                     this.todoList = response.data;
+                    console.log(this.todoList)
                 })
         },
 
         addTodo() {
-
             const data = {
                 newItem: this.newItem
             };
-
             axios.post('server.php', data,
                 {
                     headers: { 'Content-Type': 'multipart/form-data' }
@@ -28,6 +27,7 @@ createApp({
             ).then(response => {
                 this.todoList = response.data;
                 this.newItem = '';
+                console.log(this.todoList)
             });
         }
 
